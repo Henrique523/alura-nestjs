@@ -6,7 +6,9 @@ export class Usuario {
   @IsNotEmpty({
     message: 'nomeDeUsuario nao pode ser nulo.',
   })
-  @IsString()
+  @IsString({
+    message: 'nomeDeUsuario precisa ser uma string.',
+  })
   nomeDeUsuario: string
 
   @IsEmail(
